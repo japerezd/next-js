@@ -1,5 +1,4 @@
-import Image from 'next/image';
-import { PokemonGrid, PokemonsResponse, SimplePokemon } from '../pokemons/index';
+import { PokemonGrid, PokemonsResponse, SimplePokemon } from '../../../pokemons/index';
 
 const getPokemons = async (
   limit = 20,
@@ -14,6 +13,8 @@ const getPokemons = async (
     id: pokemon.url.split('/').at(-2)!,
     name: pokemon.name,
   }));
+
+  // throw new Error('Hubo un error inesperado');
   return pokemons;
 };
 
